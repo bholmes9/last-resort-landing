@@ -3,14 +3,16 @@
 #
 # Usage:
 #   STRIPE_SECRET_KEY=sk_test_... ./create_payment_links.sh            # test mode
-#   STRIPE_SECRET_KEY=sk_live_... ./create_payment_links.sh            # live mode
+#   STRIPE_SECRET_KEY=rk_live_... ./create_payment_links.sh            # live mode (restricted key)
 #   ./create_payment_links.sh --dry-run                                # print calls, hit nothing
 #
 # Run once per mode (test, then live). Re-running creates duplicate
 # products/links — archive extras in the Stripe dashboard if that happens.
 #
-# A restricted key is enough; it needs write access to: Products, Prices,
-# Payment Links. Never commit or paste the key anywhere — pass it via env.
+# For live, a restricted key (rk_live_) with write access to Products, Prices,
+# and Payment Links is enough — and preferred. For test, use the standard
+# sk_test_ key: verify_test_payment.sh needs to create a PaymentIntent, which
+# those restricted scopes don't allow. Never commit or paste keys — env only.
 set -euo pipefail
 
 # Offer names are provisional until LAS-4 finalizes the offer kit; edit here.
