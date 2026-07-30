@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Invoice — Agentic AI Advisory</title>
+<style>
+  :root { --ink: #1a1a1a; --muted: #666; --line: #ddd; --accent: #1f3a5f; }
+  * { box-sizing: border-box; }
+  body { font: 15px/1.5 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+         color: var(--ink); max-width: 760px; margin: 40px auto; padding: 0 24px; }
+  header { display: flex; justify-content: space-between; align-items: flex-start;
+           border-bottom: 3px solid var(--accent); padding-bottom: 16px; }
+  h1 { font-size: 28px; margin: 0; color: var(--accent); letter-spacing: 1px; }
+  .meta { text-align: right; color: var(--muted); }
+  .meta strong { color: var(--ink); }
+  section { margin-top: 28px; }
+  .parties { display: flex; gap: 48px; }
+  .parties h2 { font-size: 12px; text-transform: uppercase; letter-spacing: 1px;
+                color: var(--muted); margin: 0 0 6px; }
+  table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+  th { text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;
+       color: var(--muted); border-bottom: 2px solid var(--line); padding: 8px 6px; }
+  td { padding: 10px 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .num { text-align: right; white-space: nowrap; }
+  .total-row td { border-bottom: none; font-weight: 700; font-size: 17px; padding-top: 14px; }
+  .pay { background: #f4f6f9; border-left: 4px solid var(--accent); padding: 14px 18px; }
+  .pay code { background: #fff; padding: 1px 6px; border: 1px solid var(--line); border-radius: 3px; }
+  footer { margin-top: 36px; color: var(--muted); font-size: 13px; }
+  @media print { body { margin: 0 auto; } .noprint { display: none; } }
+</style>
+</head>
+<body>
+<p class="noprint" style="background:#fff8e1;border:1px solid #e0c05a;padding:10px 14px;font-size:13px;">
+  Template — replace every <strong>[BRACKETED]</strong> value, then print to PDF (⌘P → Save as PDF). Delete this banner before sending.
+</p>
+
+<header>
+  <div>
+    <h1>INVOICE</h1>
+    <div style="color:var(--muted);margin-top:4px;">Agentic AI Advisory Services</div>
+  </div>
+  <div class="meta">
+    Invoice <strong>#[2026-001]</strong><br>
+    Date: <strong>[MONTH DAY, 2026]</strong><br>
+    Due: <strong>[ON RECEIPT / NET 7]</strong>
+  </div>
+</header>
+
+<section class="parties">
+  <div>
+    <h2>From</h2>
+    <strong>[BEN'S FULL NAME / BUSINESS NAME]</strong><br>
+    [ADDRESS LINE]<br>
+    [CITY, STATE ZIP]<br>
+    [EMAIL]
+  </div>
+  <div>
+    <h2>Bill to</h2>
+    <strong>[CLIENT NAME]</strong><br>
+    [CLIENT COMPANY]<br>
+    [CLIENT EMAIL]
+  </div>
+</section>
+
+<section>
+  <table>
+    <thead>
+      <tr><th>Description</th><th class="num">Qty</th><th class="num">Rate</th><th class="num">Amount</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <strong>[Agentic AI Advisory — Strategy Session]</strong><br>
+          <span style="color:var(--muted)">[Deep-dive session on your agentic AI / SDLC-automation problem, with written recommendations. Delivered MONTH DAY, 2026.]</span>
+        </td>
+        <td class="num">1</td>
+        <td class="num">$[750.00]</td>
+        <td class="num">$[750.00]</td>
+      </tr>
+      <tr class="total-row">
+        <td colspan="3">Total due</td>
+        <td class="num">$[750.00] USD</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="pay">
+  <strong>How to pay</strong><br>
+  Pay online by card: <code>[STRIPE PAYMENT LINK URL]</code><br>
+  <span style="color:var(--muted)">Questions about this invoice: [EMAIL]</span>
+</section>
+
+<footer>
+  Thank you for your business. Payment is due [on receipt]. This invoice covers professional
+  advisory services; no goods were sold.
+</footer>
+</body>
+</html>

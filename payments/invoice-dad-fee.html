@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Invoice — Property Marketing Services</title>
+<style>
+  :root { --ink: #1a1a1a; --muted: #666; --line: #ddd; --accent: #3d5c3a; }
+  * { box-sizing: border-box; }
+  body { font: 15px/1.5 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+         color: var(--ink); max-width: 760px; margin: 40px auto; padding: 0 24px; }
+  header { display: flex; justify-content: space-between; align-items: flex-start;
+           border-bottom: 3px solid var(--accent); padding-bottom: 16px; }
+  h1 { font-size: 28px; margin: 0; color: var(--accent); letter-spacing: 1px; }
+  .meta { text-align: right; color: var(--muted); }
+  .meta strong { color: var(--ink); }
+  section { margin-top: 28px; }
+  .parties { display: flex; gap: 48px; }
+  .parties h2 { font-size: 12px; text-transform: uppercase; letter-spacing: 1px;
+                color: var(--muted); margin: 0 0 6px; }
+  table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+  th { text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;
+       color: var(--muted); border-bottom: 2px solid var(--line); padding: 8px 6px; }
+  td { padding: 10px 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .num { text-align: right; white-space: nowrap; }
+  .total-row td { border-bottom: none; font-weight: 700; font-size: 17px; padding-top: 14px; }
+  .pay { background: #f4f7f4; border-left: 4px solid var(--accent); padding: 14px 18px; }
+  .note { background: #fdf6ec; border-left: 4px solid #c9a35a; padding: 12px 18px;
+          font-size: 13.5px; margin-top: 20px; }
+  footer { margin-top: 36px; color: var(--muted); font-size: 13px; }
+  @media print { body { margin: 0 auto; } .noprint { display: none; } }
+</style>
+</head>
+<body>
+<p class="noprint" style="background:#fff8e1;border:1px solid #e0c05a;padding:10px 14px;font-size:13px;">
+  Template — replace every <strong>[BRACKETED]</strong> value. Milestone amounts and percentages must
+  match the signed Marketing Services Agreement (LAS-7 draft). Issue one invoice per milestone:
+  keep only that milestone's row in the table, or mark the other as "previously invoiced".
+  Delete this banner before sending.
+</p>
+
+<header>
+  <div>
+    <h1>INVOICE</h1>
+    <div style="color:var(--muted);margin-top:4px;">Property Marketing Services</div>
+  </div>
+  <div class="meta">
+    Invoice <strong>#[2026-LAND-01]</strong><br>
+    Date: <strong>[MONTH DAY, 2026]</strong><br>
+    Due: <strong>[PER AGREEMENT MILESTONE]</strong>
+  </div>
+</header>
+
+<section class="parties">
+  <div>
+    <h2>From</h2>
+    <strong>[BEN'S FULL NAME / BUSINESS NAME]</strong><br>
+    [ADDRESS LINE]<br>
+    [CITY, STATE ZIP]<br>
+    [EMAIL]
+  </div>
+  <div>
+    <h2>Bill to</h2>
+    <strong>[DAD'S FULL NAME]</strong><br>
+    [ADDRESS]<br>
+    [EMAIL]
+  </div>
+</section>
+
+<section>
+  <div style="color:var(--muted);font-size:13.5px;">
+    For marketing services relating to the sale of the property at
+    <strong>[PROPERTY ADDRESS / PARCEL ID]</strong>, per the Marketing Services Agreement
+    dated <strong>[AGREEMENT DATE]</strong>.
+  </div>
+  <table>
+    <thead>
+      <tr><th>Milestone</th><th>Trigger</th><th class="num">Amount</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Milestone 1 — [XX]% of fee</strong><br>
+            <span style="color:var(--muted)">Listing kit produced, property marketed across agreed channels</span></td>
+        <td>Buyer's signed purchase agreement, dated [DATE]</td>
+        <td class="num">$[AMOUNT]</td>
+      </tr>
+      <tr>
+        <td><strong>Milestone 2 — balance of fee</strong><br>
+            <span style="color:var(--muted)">Continued marketing support through closing</span></td>
+        <td>Closing / recording of sale, dated [DATE]</td>
+        <td class="num">$[AMOUNT]</td>
+      </tr>
+      <tr class="total-row">
+        <td colspan="2">Total due this invoice</td>
+        <td class="num">$[AMOUNT] USD</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="pay">
+  <strong>How to pay</strong><br>
+  Bank transfer / check payable to: <code>[NAME / ACCOUNT DETAILS]</code><br>
+  <span style="color:var(--muted)">Or pay online by card: [STRIPE PAYMENT LINK / INVOICE URL] (card fees ~2.9% + $0.30 — bank transfer preferred for amounts this size)</span>
+</section>
+
+<section class="note">
+  <strong>Structure note:</strong> this invoice bills fixed-fee <em>marketing services</em> under the
+  Marketing Services Agreement — it is not a real-estate commission, and the service provider does not
+  represent either party in the sale or negotiate on their behalf.
+</section>
+
+<footer>
+  Thank you. Payment due per the milestone terms of the Marketing Services Agreement.
+</footer>
+</body>
+</html>
